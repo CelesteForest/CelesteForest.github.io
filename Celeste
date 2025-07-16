@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Pool Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .project-info {
+      padding: 1rem;
+    }
+
+    .project-info h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #0077b6;
+    }
+
+    .project-info p {
+      margin: 0.3rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #023e8a;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .project-info h2 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Pool Projects</h1>
+  <p>Design. Build. Inspire.</p>
+</header>
+
+<div class="gallery" id="project-gallery">
+  <!-- Projects will be injected here -->
+</div>
+
+<footer>
+  &copy; 2025 My Pool Projects. All rights reserved.
+</footer>
+
+<script>
+  // Sample project data — replace with your own!
+  const projects = [
+    {
+      title: "Infinity Pool in Malibu",
+      location: "Malibu, CA",
+      year: 2024,
+      description: "Modern infinity-edge pool with ocean view.",
+      images: ["https://via.placeholder.com/600x400?text=Malibu+Pool"]
+    },
+    {
+      title: "Luxury Resort Pool",
+      location: "Scottsdale, AZ",
+      year: 2023,
+      description: "Resort-style lagoon pool with rock waterfall.",
+      images: ["https://via.placeholder.com/600x400?text=Resort+Pool"]
+    },
+    {
+      title: "Backyard Oasis",
+      location: "Austin, TX",
+      year: 2022,
+      description: "Compact backyard pool with fire pit and lighting.",
+      images: ["https://via.placeholder.com/600x400?text=Backyard+Oasis"]
+    }
+  ];
+
+  const gallery = document.getElementById('project-gallery');
+
+  projects.forEach(project => {
+    const card = document.createElement('div');
+    card.className = 'project-card';
+    card.innerHTML = `
+      <img src="${project.images[0]}" alt="${project.title}">
+      <div class="project-info">
+        <h2>${project.title}</h2>
+        <p><strong>Location:</strong> ${project.location}</p>
+        <p><strong>Year:</strong> ${project.year}</p>
+        <p>${project.description}</p>
+      </div>
+    `;
+    gallery.appendChild(card);
+  });
+</script>
+
+</body>
+</html>
