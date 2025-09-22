@@ -1,21 +1,9 @@
-body {
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
-  background: #695f59;
-}
-
-.video-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
 video {
+  pointer-events: none;
   max-width: 85vw;
   max-height: 80vh;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
   border-radius: 14px;
   background: #222;
+  display: block;
+  margin: auto;
 }
