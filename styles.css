@@ -20,8 +20,6 @@ video#bg-video {
   object-fit: cover;
   border-radius: 0;
   background-color: #695f59;
-  filter: brightness(0.7) saturate(1.2);
-  /* blending the edges into the background */
   mix-blend-mode: multiply;
   /* Prevent video controls from showing */
   pointer-events: none;
