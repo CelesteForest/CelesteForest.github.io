@@ -1,28 +1,25 @@
 html, body {
-  height: 100%;
   margin: 0;
+  height: 100%;
   background-color: #695f59;
-  overflow: hidden;
-}
-
-.video-wrapper {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
-video#bg-video {
+.video-wrapper {
   max-width: 100vw;
   max-height: 100vh;
-  object-fit: cover;
-  border-radius: 0;
-  background-color: #695f59;
-  mix-blend-mode: multiply;
-  /* Prevent video controls from showing */
-  pointer-events: none;
-  outline: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video#center-video {
+  max-width: 85vw;
+  max-height: 80vh;
   display: block;
+  outline: none;
+  pointer-events: none; /* Disable interactions */
 }
