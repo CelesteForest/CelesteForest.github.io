@@ -34,16 +34,16 @@ html, body {
   pointer-events: none; /* prevents overlay being interactive except for links */
 }
 
-.overlay-content h1 {
-  font-size: 4em;
-  font-family: 'Arial Black', Arial, sans-serif;
-  color: #f20733; /* bold retro red */
-  text-shadow: 0 0 22px #fff, 0 0 14px #f20733;
+.overlay h1 {
+  font-size: 4.5em;
+  font-family: 'Special Elite', 'Bookman', serif;
+  color: #F27507; /* Big retro red */
   font-weight: bold;
-  margin-bottom: 0.4em;
-  letter-spacing: 3px;
-  pointer-events: auto;
+  letter-spacing: 5px;
+  margin-bottom: 0.8em;
+  text-shadow: none; /* Removes the glow */
 }
+
 
 .overlay-content nav {
   display: flex;
