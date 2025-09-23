@@ -35,15 +35,14 @@ html, body {
 }
 
 .overlay h1 {
-  font-size: 4.5em;
-  font-family: 'Special Elite', 'Bookman', serif;
-  color: #F27507; /* Big retro red */
+  font-size: 6em;           /* Make text larger, adjust as needed */
+  font-family: 'Courier New', Courier, monospace; /* Use Courier font family */
+  color: #27ae60;           /* Set to any color you want (green example) */
   font-weight: bold;
   letter-spacing: 5px;
   margin-bottom: 0.8em;
-  text-shadow: none; /* Removes the glow */
+  text-shadow: none;        /* Makes sure glow is off */
 }
-
 
 .overlay-content nav {
   display: flex;
