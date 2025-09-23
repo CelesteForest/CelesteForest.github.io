@@ -34,16 +34,6 @@ html, body {
   pointer-events: none; /* prevents overlay being interactive except for links */
 }
 
-.overlay h1 {
-  font-size: 6em;           /* Make text larger, adjust as needed */
-  font-family: 'Courier New', Courier, monospace; /* Use Courier font family */
-  color: #27ae60;           /* Set to any color you want (green example) */
-  font-weight: bold;
-  letter-spacing: 5px;
-  margin-bottom: 0.8em;
-  text-shadow: none;        /* Makes sure glow is off */
-}
-
 .plaster-regular {
   font-family: "Plaster", system-ui;
   font-weight: 400;
@@ -75,9 +65,12 @@ html, body {
   pointer-events: auto;
 }
 
+.overlay-content h2 {
+  color: #000000; 
+  font-size: .5em; 
+}
+
 .overlay-content nav a {
-  font-size: 1.4em;
-  color: #fff;
   background: none;          /* Remove background */
   padding: 0;               /* Remove padding */
   border-radius: 0;         /* Remove border radius */
@@ -89,7 +82,7 @@ html, body {
 }
 
 .overlay-content nav a:hover {
-  color: #bbb; /* Darken text on hover */
+  color: #FFDA22; /* Darken text on hover */
   background: none; /* Make sure no background appears */
   border: none;     /* Make sure no border appears */
   cursor: pointer;  /* Show pointer cursor */
