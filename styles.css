@@ -52,6 +52,20 @@ html, body {
   color: #F24E07;
 }
 
+.uncial-antiqua-regular {
+  font-family: "Uncial Antiqua", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jacquard-24-regular {
+  font-family: "Jacquard 24", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
 .overlay-content nav {
   display: flex;
   gap: 1.8em;
