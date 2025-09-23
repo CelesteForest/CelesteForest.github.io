@@ -48,8 +48,8 @@ html, body {
   font-family: "Plaster", system-ui;
   font-weight: 400;
   font-style: normal;
-  font-size: 8em;  /* Increase font size */
-  color: #F27507;
+  font-size: 6em;  /* Increase font size */
+  color: #F24E07;
 }
 
 .overlay-content nav {
