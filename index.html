@@ -3,12 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Centered Video</title>
+  <title>Celeste's Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="video-wrapper">
-    <video autoplay muted loop playsinline id="center-video" src="assets/myvideo.mp4"></video>
+  <!-- Fullscreen background video -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="assets/myvideo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlayed content -->
+  <div class="overlay-content">
+    <h1>Celeste's Portfolio</h1>
+    <nav>
+      <a href="about.html">about me</a>
+      <a href="contact.html">contact</a>
+      <a href="creations.html">creations</a>
+    </nav>
   </div>
 </body>
 </html>
