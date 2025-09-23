@@ -56,12 +56,16 @@ html, body {
   font-family: "Uncial Antiqua", system-ui;
   font-weight: 400;
   font-style: normal;
+  font-size: 5em; 
+  color: #F24E07;
 }
 
 .jacquard-24-regular {
   font-family: "Jacquard 24", system-ui;
   font-weight: 400;
   font-style: normal;
+    font-size: 1em; 
+  color: #F24E07;
 }
 
 
