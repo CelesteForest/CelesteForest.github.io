@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Special Elite', 'Bookman', serif;
+  font-family: 'Courier New', Courier, monospace; /* Use Courier font */
 }
 
 /* Fullscreen video background */
