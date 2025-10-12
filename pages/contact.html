@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Celeste's Portfolio - Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Chiron+GoRound+TC:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <header class="header-photo">
+    <img src="../assets/header-photo.jpg" alt="Header Photo" />
+  </header>
+
+  <div class="overlay-content">
+    <nav>
+      <a href="../index.html" class="montserrat">Home</a>
+      <a href="projects.html" class="montserrat">Projects</a>
+      <a href="resume.html" class="montserrat">Resume</a>
+      <a href="contact.html" class="montserrat">Contact</a>
+    </nav>
+  </div>
+
+  <main class="main-content">
+    <h1 class="title-op">Contact Info</h1>
+ 
+  <div class="contact-container" role="main" aria-label="Contact form and info">
+    <article class="project-box-1" aria-label="Contact form">
+      <h2>Let's Talk</h2>
+      <form
+        id="contactForm"
+        action="mailto:celeste.4ster@gmail.com"
+        method="POST"
+        enctype="text/plain"
+        novalidate
+      >
+        <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+        <input type="email" name="email" placeholder="Your Email" required autocomplete="email" />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="see-more-button">Send</button>
+      </form>
+    </article>
+
+
+    <aside class="right-panel" aria-label="Contact information and social links">
+      <img src="../assets/headshot.png" alt="Celeste Forester Headshot" class="profile-photo" />
+      <div class="icon-row">
+          <a href="https://www.linkedin.com/in/celeste-forester" target="_blank" rel="noopener noreferrer" aria-label="Celeste Forester LinkedIn Profile">
+            <img
+              src="../assets/linkedin-logo.jpg"
+              alt="LinkedIn Logo"
+              class="icon-logo"/>
+          </a>
+          <a href="https://grabcad.com/celeste.forester-1" target="_blank" rel="noopener noreferrer" aria-label="Celeste Forester GrabCAD Profile">
+            <img
+              src="../assets/grabcad-logo.png"
+              alt="GrabCAD Logo"
+              class="icon-logo"/>
+            </a>
+        </div>
+      <div class="contact-info">
+        <p class = "chiron-goround-tc"> Email: <a href="mailto:Ceforest@umich.edu">Ceforest@umich.edu</a></p>
+      </div>
+    </aside>
+  </div>
+</main>
+</body>
+</html>
+
+
 

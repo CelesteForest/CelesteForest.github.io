@@ -1,8 +1,30 @@
 html, body {
+  scroll-behavior: smooth;
   margin: 0;
+  padding: 0;
   height: 100%;
-  font-family: 'Courier New', Courier, monospace; /* Use Courier font */
+  font-family: 'Courier New'; /* Fallback font */
 }
+
+
+/* Thin Video Top */
+.header-photo { /*photo container */
+  position: fixed;
+   top: 0;
+   left: 0;
+  width: 100%;
+  height: 20%; /* 5% of viewport height */
+  overflow: hidden;
+}
+
+
+.header-photo img { /*image element */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 
 /* Fullscreen video background */
 #bg-video {
@@ -13,59 +35,50 @@ html, body {
   min-height: 100vh;
   width: auto;
   height: auto;
-  z-index: 1;
+  z-index: 0;
   object-fit: cover;
   background: #000;
 }
 
+
+/* Black Video Overlay */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: rgba(0,0,0,0.5); /*Darkness of overlay */
+  pointer-events: none;
+  backdrop-filter: blur(2px); /* blue video */
+  -webkit-backdrop-filter: blur(2px);
+}
+
+
+
+
 /* Overlay content */
 .overlay-content {
-  position: fixed;     /* fix the container on the viewport */
-  top: 10px;           /* distance from top */
-  left: 0;             /* start at left edge */
-  width: 100%;         /* make container full width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;  /* center child items horizontally */
-  pointer-events: auto;
-  z-index: 1000;
-  text-align: center;   /* center text inside the container */
-}
-
-.bungee-tint-regular {
-  font-family: "Bungee Tint", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 6em;  /* Increase font size */
-  color: #F24E07;
-}
-.tai-heritage-pro-regular {
-  font-family: "Tai Heritage Pro", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2em;  /* Increase font size */
-  color: #F24E07;
-}
-
-.pt-serif-caption-regular {
-  font-family: "PT Serif Caption", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 5em;  /* Increase font size */
-  color: #F24E07;
-}
-
-.pt-serif-caption-regular-italic {
-  font-family: "PT Serif Caption", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-
-.overlay-content nav {
-  display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;}
+
+.overlay-content nav {
+  position: absolute;
+  top: 2em;
+  right: 3em;
+  pointer-events: auto;
+  display: flex;
+  gap: 1.8em; /* distance between click links */
 }
 
 .overlay-content nav a {
@@ -74,14 +87,405 @@ html, body {
   border-radius: 0;         /* Remove border radius */
   border: none;             /* Remove border */
   text-decoration: none;
-  font-weight: bold;
   letter-spacing: 2px;
+  font-weight: bold;  /* Makes Nav bolder */
   transition: color 0.18s;
+  font-family: "Montserrat", sans-serif;
+
 }
 
 .overlay-content nav a:hover {
-  color: #D04111; /* Darken text on hover */
+  color: #D9BF77; /* Darken text on hover */
   background: none; /* Make sure no background appears */
   border: none;     /* Make sure no border appears */
   cursor: pointer;  /* Show pointer cursor */
+}
+
+
+
+
+
+
+
+
+/* Google Font Imports */
+
+/* <weight>: Use a value from 100 to 900
+ <uniquifier>: Use a unique and descriptive class name */
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1em;
+  color: #FFFFFF;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+.montserrat-black {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1em;
+  color: #000000;
+}
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5em;
+  color: #FFFFFF;
+}
+
+/* <weight>: Use a value from 200 to 900
+ <uniquifier>: Use a unique and descriptive class name */
+.chiron-goround-tc {
+  font-family: "Chiron GoRound TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #121f2c;
+  font-size: 1em;
+}
+
+.title-cp { /* Cover Page Title */
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 12vh;
+  color: #FFFFFF;
+  pointer-events: auto;
+  margin-bottom: 0.1em;
+}
+
+.title-op { /* Other Page Titles */
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: #121f2c;
+  text-align: center;
+  z-index: 10; 
+}
+
+
+
+/* Main content under header */
+.main-content {
+  margin-top: 20vh; /* pushes content below your 20% header */
+  max-width: 900px;
+  padding: 0 1.5em 3em 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  color: #1a3d85; /* a clean professional blue */
+  text-align: center; /* DELETE */
+}
+
+/* Projects list container */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+/* Individual project box */
+.project-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  background: #d8dfe5;
+  padding: 1.5em 2em;
+  border-radius: 1em;
+  box-shadow: 0 4px 12px rgba(26, 61, 133, 0.2); /* vertical offset, blur, opacity*/
+}
+
+/* Photo styling */
+.project-photo {
+  width: 190px;
+  height: 190px;
+  border-radius: 1em;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Info section */
+
+.main-content h2 {
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: (18*1.25*2)px;
+  margin: 0 0 1rem 0;
+  color: #000000;
+  letter-spacing: 2px;
+}
+
+.skills-list {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1.1rem;
+}
+
+.skill-circle {
+  background-color: #f6fbff;      /* light grey background */
+  color: #000000;                 /* blue text color */
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #dbedfa;     /* add a border with your chosen color, e.g., dark blue */
+  border-radius: 0.5rem;          /* rounded corners for fillet edges */
+  padding: 0.5rem 1rem;           /* padding for content spacing */
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+/* Alternate project pictures left/right */
+.left-photo {
+  flex-direction: row;
+  text-align: left;
+
+}
+
+.right-photo { /*Not using rn, incase photo flip for projects*/
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+/* Responsive usability */
+@media (max-width: 700px) {
+  .project-box,
+  .right-photo,
+  .left-photo {
+    flex-direction: column !important;
+    text-align: left !important;
+  }
+  .project-photo {
+    width: 100%;
+    height: 230px;
+  }
+}
+
+.see-more-button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #fefe66;
+  color: #000000;
+  border: 4px solid #dbedfa;     /* add a border with your chosen color, e.g., dark blue */
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 0.5em;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  max-width: 200px; /* DELETE */
+
+}
+
+.see-more-button:hover {
+  background-color: #D9BF77;
+  color: #000000;
+  cursor: pointer;
+}
+
+.media-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* optional: centers button under video */
+  gap: 0.5em; /* space between video and button */
+}
+
+
+
+/* Contact Page Coding */
+ .contact-container {
+      display: flex;
+      max-width: 900px;
+      gap: 3em;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+     .project-box-1 {
+      background: #d8dfe5;
+      padding: 2.5em 3em;
+      border-radius: 1em;
+      box-shadow: 0 4px 12px rgba(26, 61, 133, 0.2);
+      flex: 1 1 400px;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-box-1 form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25em;
+      width: 100%;
+    }
+
+    .project-box-1 form input,
+    .project-box-1 form textarea {
+      width: 100%;
+      padding: 0.85em 1.25em;
+      border: 2px solid #dbedfa;
+      border-radius: 0.5rem;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      outline-color: #d9bf77;
+      resize: vertical;
+      transition: border-color 0.25s ease;
+    }
+
+    .project-box-1 form input:focus,
+    .project-box-1 form textarea:focus {
+      border-color: #d9bf77;
+    }
+    .project-box-1 textarea {
+      min-height: 140px;
+    }
+
+    .right-panel {
+      flex: 0 1 250px;
+      background: #f6fbff;
+      padding: 2em 1.5em;
+      border-radius: 1em;
+      box-shadow: 0 4px 12px rgba(26, 61, 133, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5em;
+      font-family: "Montserrat", sans-serif;
+      color: #121f2c;
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-align: center;
+    }
+
+    .right-panel a {
+      display: inline-block;
+    }
+
+    .contact-info p { /* DELETE */
+      margin: 0.25em 0;
+    }
+
+
+       @media (max-width: 750px) {
+      .contact-container {
+        flex-direction: column;
+        padding: 1em;
+        max-width: 100%;
+      }
+      .project-box-1,
+      .right-panel {
+        max-width: 100%;
+        flex: none;
+        margin-bottom: 2em;
+      }
+      main.main-content h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+  .profile-photo { /* Profile Photo for 'headshot.jpg' in contact.html */
+  width: 160px;            /* adjust size as needed */
+  height: 160px;
+  border-radius: 50%;      /* makes the image circular */
+  object-fit: cover;       /* ensures it fills the circle neatly */
+  margin-bottom: 1em;      /* space below before LinkedIn or contact text */
+  transition: transform 0.3s ease;
+  border: 3px solid #dbedfa;  /* adds a decorative border */
+}
+
+.icon-row { /* Row of icons of contact.html */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* space between icons */
+}
+
+.icon-logo { /* icon size of contact.html */
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.icon-logo:hover {
+  transform: scale(1.12);
+  cursor: pointer;
+}
+
+/* Resume Page */
+/* Resume Page Layout */
+.resume-layout {
+  display: flex;
+  justify-content: space-between; /* Equal distant items */
+  align-items: stretch;
+  gap: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: nowrap; /* keeps both sections side by side */
+}
+
+/* Left Info Section */
+.left-info {
+  max-width: 35%;
+  flex: 1 1 50%;
+  background: #d8dfe5;
+  border-radius: 1em;
+  padding: 2em 2.5em;
+  box-shadow: 0 6px 20px rgba(26, 61, 133, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5em;
+  text-align: center;
+}
+
+/* Resume PDF Section */
+.pdf-iframe { /* Size of PDF in Resume Page*/
+  flex: 1 1 50%;
+  max-width: 120vh;
+  min-width: 300px;
+  height: 120vh;
+  min-height: 300px;
+  border: none;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 900px) {
+  .resume-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-info,
+  .pdf-iframe {
+    max-width: 90%;
+    flex: 1 1 100%;
+  }
 }
