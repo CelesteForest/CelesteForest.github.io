@@ -23,6 +23,20 @@ html, body {
   height: 100%;
   object-fit: cover;
   display: block;
+  object-position: top;  
+}
+
+.header-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  z-index: 1;
+  background: rgba(0,0,0,0.5); /*Darkness of overlay */
+  pointer-events: none;
+  backdrop-filter: blur(2px); /* blue video */
+  -webkit-backdrop-filter: blur(2px);
 }
 
 
@@ -95,7 +109,7 @@ html, body {
 }
 
 .overlay-content nav a:hover {
-  color: #D9BF77; /* Darken text on hover */
+  color: #fefe66; /* Darken text on hover */
   background: none; /* Make sure no background appears */
   border: none;     /* Make sure no border appears */
   cursor: pointer;  /* Show pointer cursor */
@@ -222,7 +236,7 @@ html, body {
   font-weight: 700;
   font-style: bold;
   font-size: (18*1.25*2)px;
-  margin: 0 0 1rem 0;
+  margin-bottom: 0.2rem;
   color: #000000;
   letter-spacing: 2px;
 }
@@ -279,11 +293,11 @@ html, body {
 
 .see-more-button {
   display: inline-block;
-  margin-top: 1em;
+  margin-top: .5em;
   padding: 0.5em 1em;
   background-color: #fefe66;
   color: #000000;
-  border: 4px solid #dbedfa;     /* add a border with your chosen color, e.g., dark blue */
+  border: 2px solid #f6fbff;     /* add a border with your chosen color, e.g., dark blue */
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -292,6 +306,7 @@ html, body {
   transition: background-color 0.2s ease;
   cursor: pointer;
   max-width: 200px; /* DELETE */
+  box-shadow: 0 4px 12px rgba(26, 61, 133, 0.2); /* vertical offset, blur, opacity*/
 
 }
 
@@ -461,7 +476,7 @@ html, body {
   box-shadow: 0 6px 20px rgba(26, 61, 133, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 1.5em;
   text-align: center;
 }
